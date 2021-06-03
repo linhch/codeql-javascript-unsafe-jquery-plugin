@@ -1,5 +1,8 @@
 import javascript
 
-from CallExpr dollarCall
-where dollarCall.getCalleeName() = "$"
+from CallExpr dollarCall, Expr dollarArg
+where 
+  dollarArg = dollarCall.getArgument(0) and
+  dollarCall.getCalleeName() = "$"
 select dollarCall
+
