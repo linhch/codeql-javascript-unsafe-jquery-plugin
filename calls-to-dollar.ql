@@ -5,4 +5,3 @@ where
   dollarCall.getCalleeName() = "$" and
   dollarArg = dollarCall.getArgument(0)
 select dollarArg
-
